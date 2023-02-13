@@ -1,18 +1,166 @@
 [
     {
-    "ParameterKey": "VpcCIDR",
-    "ParameterValue": "10.0.0.0/16"
+          "ParameterKey": "VpcCidrBlock",
+            "ParameterValue": "10.0.0.0/16"
     },
     {
-        "ParameterKey": "PublicSubnet1CIDR",
-        "ParameterValue": "10.0.3.0/24"
+          "ParameterKey": "Subnets",
+            "ParameterValue": "6"
     },
     {
-        "ParameterKey": "PublicSubnet2CIDR",
-        "ParameterValue": "10.0.4.0/24"
+          "ParameterKey": "Offset",
+            "ParameterValue": "8"
     },
     {
-        "ParameterKey": "PublicSubnet3CIDR",
-        "ParameterValue": "10.0.5.0/24"
+          "ParameterKey": "PublicCIDR",
+            "ParameterValue": "0.0.0.0/0"
+    },
+    {
+          "ParameterKey": "AMI",
+            "ParameterValue": "ami-08b50b4a3aeab8327"
+    },
+    {
+        "ParameterKey": "keyName",
+            "ParameterValue": "SSH_Key"
+    },
+    {
+          "ParameterKey": "Env",
+            "ParameterValue": "dev"
+    },
+    {
+          "ParameterKey": "Tld",
+            "ParameterValue": "mohitmalani.tech"
+    },
+    {
+          "ParameterKey": "Engine",
+            "ParameterValue": "postgres"
+    },
+    {
+          "ParameterKey": "EngineVersion",
+            "ParameterValue": "12.9"
+    },
+    {
+          "ParameterKey": "InstanceClass",
+            "ParameterValue": "db.t2.small"
+    },
+    {
+          "ParameterKey": "AZDeployment",
+            "ParameterValue": "false"
+    },
+    {
+          "ParameterKey": "InstanceIdentifier",
+            "ParameterValue": "csye6225"
+    },
+    {
+          "ParameterKey": "DBUsername",
+            "ParameterValue": "csye6225_user"
+    },
+    {
+          "ParameterKey": "DBPassword",
+            "ParameterValue": "LogMeiN!"
+    },
+    {
+          "ParameterKey": "PublicAccess",
+            "ParameterValue": "false"
+    },
+    {
+          "ParameterKey": "DBName",
+            "ParameterValue": "csye6225"
+    },
+    {
+          "ParameterKey": "Storage",
+            "ParameterValue": "20"
+    },
+    {
+          "ParameterKey": "Zone",
+            "ParameterValue": "us-east-1a"
+    },
+    {
+          "ParameterKey": "RetentionPeriod",
+            "ParameterValue": "0"
+    },
+    {
+      "ParameterKey": "HostedZoneID",
+        "ParameterValue": "Z01273983EUFZC6SY0X7K"
+    },
+    {
+      "ParameterKey": "HostedZone",
+        "ParameterValue": "prod.mohitmalani.tech"
+    },
+    {
+      "ParameterKey": "GHRegion",
+        "ParameterValue": "us-east-1"
+    },
+    {
+      "ParameterKey": "GHAccount",
+        "ParameterValue": "114443752637"
+    },
+    {
+      "ParameterKey": "DynamoDbTable",
+        "ParameterValue": "myTableName"
+    },
+    {
+      "ParameterKey": "DynamoDbTable1",
+        "ParameterValue": "myTableName1"
+    },
+    {
+      "ParameterKey": "AppPort",
+        "ParameterValue": "3000"
+    },
+    {
+      "ParameterKey": "LoadEndPoint",
+        "ParameterValue": "/healthz"
+    },
+    {
+      "ParameterKey": "HTTPProtocol",
+        "ParameterValue": "HTTPS"
+    },
+    {
+      "ParameterKey": "HTTPPort",
+        "ParameterValue": "443"
+    },
+    {
+      "ParameterKey": "MaxSize",
+        "ParameterValue": "5"
+    },
+    {
+      "ParameterKey": "MinSize",
+        "ParameterValue": "3"
+    },
+    {
+      "ParameterKey": "CooldownPeriod",
+        "ParameterValue": "60"
+    },
+    {
+      "ParameterKey": "loadbalanceScheme",
+        "ParameterValue": "internet-facing"
+    },
+    {
+      "ParameterKey": "IpAddressType",
+        "ParameterValue": "ipv4"
+    },
+    {
+      "ParameterKey": "ThresholdCount",
+        "ParameterValue": "2"
+    },
+    {
+      "ParameterKey": "HealthCheckInterval",
+        "ParameterValue": "90"
+    },
+    {
+      "ParameterKey": "BlockDeviceName",
+        "ParameterValue": "/dev/sda1"
+    },
+    {
+      "ParameterKey": "BlockDeviceSize",
+        "ParameterValue": "8"
+    },
+    {
+      "ParameterKey": "BlockDeviceType",
+        "ParameterValue": "gp2"
+    },
+    {
+      "ParameterKey": "ApplicationName",
+        "ParameterValue": "csye6225-webapp"
     }
 ]
