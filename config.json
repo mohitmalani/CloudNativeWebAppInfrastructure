@@ -14,5 +14,14 @@
     {
         "ParameterKey": "PublicSubnet3CIDR",
         "ParameterValue": "10.0.5.0/24"
+    },
+    {
+        "ParameterKey": "imageId",
+        "ParameterValue": "ami-0b1300cfdbec6a6ca"
+
+    },
+    {
+        "ParameterKey": "keyName",
+        "ParameterValue": "SSH_Key"
     }
 ]

@@ -73,7 +73,37 @@ export AWS_PROFILE=prod
 ## aws networking
 
 aws cloudformation create-stack --stack-name <stack_name> --template-body <path_to_file> --parameters <path_to_file>
-//aws cloudformation create-stack --profile=demo --stack-name thur-vpc2 --template-body file://csye6225-infra.yml --parameters file://config.json
+//aws cloudformation create-stack --profile=demo --stack-name Demo --template-body file://csye6225-infra.yml --parameters file://config.json
 
 aws cloudformation delete-stack --stack-name <stack_name>
-// aws cloudformation delete-stack --stack-name thur-vpc2 
+// aws cloudformation delete-stack --stack-name Demo 
+
+As part of **Assignment #04** following resources are added in CloudFormation template:
+
+**App Security Group**
+
+Create an EC2 security group for your EC2 instances that will host web applications.
+
+Add ingress rule to allow TCP traffic on ports 80, 22, 3000, 443, and port on which your application runs from anywhere in the world.
+
+This security group will be referred to as the application security group.
+
+**EC2 Instance**
+
+The EC2 instance should belong to the VPC you have created.
+
+Application security group should be attached to this EC2 instance.
+
+Make sure the EBS volumes are terminated when EC2 instances are terminated.
+
+Parameter	Value
+
+Amazon Machine Image (AMI)	Your custom AMI
+
+Instance Type	t2.micro
+
+Protect against accidental termination	No
+
+Root Volume Size	20
+
+Root Volume Type	General Purpose SSD (GP2)

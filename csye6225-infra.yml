@@ -23,6 +23,14 @@ Parameters:
     Type: String
     Default: 10.0.2.0/24
 
+  imageId:
+    Description: "AMI Image ID"
+    Type: String
+
+  keyName:
+    Description: "Key Name"
+    Type: String
+
 Resources:
   VPC:
     Type: AWS::EC2::VPC
@@ -113,6 +121,50 @@ Resources:
     Properties:
       RouteTableId: !Ref PublicRouteTable
       SubnetId: !Ref PublicSubnet3
+
+  InstanceSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Allow http to client host
+      GroupName: application security group
+      VpcId: !Ref VPC
+      SecurityGroupIngress:
+      - IpProtocol: tcp
+        FromPort: 80
+        ToPort: 80
+        CidrIp: 0.0.0.0/0
+      - IpProtocol: tcp
+        FromPort: 22
+        ToPort: 22
+        CidrIp: 0.0.0.0/0
+      - IpProtocol: tcp
+        FromPort: 443
+        ToPort: 443
+        CidrIp: 0.0.0.0/0
+      - IpProtocol: tcp
+        FromPort: 3000
+        ToPort: 3000
+        CidrIp: 0.0.0.0/0
+      Tags:
+        - Key: Name
+          Value: application security group
+  
+  MyEC2Instance: 
+    Type: AWS::EC2::Instance
+    Properties: 
+      ImageId: !Ref imageId
+      KeyName: !Ref keyName
+      InstanceType: "t2.micro"
+      SecurityGroupIds: 
+      - Ref: InstanceSecurityGroup
+      SubnetId: !Ref PublicSubnet1
+      BlockDeviceMappings: 
+        - DeviceName: "/dev/sda1"
+          Ebs: 
+            VolumeType: "gp2"
+            DeleteOnTermination: "true"
+            VolumeSize: "20"
+
   
 Outputs:
   VPC:
@@ -130,3 +182,7 @@ Outputs:
   PublicSubnet3:
     Description: A reference to the public subnet in the 2nd Availability Zone
     Value: !Ref PublicSubnet3
+
+  EC2InstanceId:
+    Description: EC2 Instance ID
+    Value: !Ref MyEC2Instance
