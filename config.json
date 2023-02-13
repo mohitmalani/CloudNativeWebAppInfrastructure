@@ -1,18 +1,90 @@
 [
     {
-    "ParameterKey": "VpcCIDR",
-    "ParameterValue": "10.0.0.0/16"
+          "ParameterKey": "VpcCidrBlock",
+            "ParameterValue": "10.0.0.0/16"
     },
     {
-        "ParameterKey": "PublicSubnet1CIDR",
-        "ParameterValue": "10.0.3.0/24"
+          "ParameterKey": "Subnets",
+            "ParameterValue": "6"
     },
     {
-        "ParameterKey": "PublicSubnet2CIDR",
-        "ParameterValue": "10.0.4.0/24"
+          "ParameterKey": "Offset",
+            "ParameterValue": "8"
     },
     {
-        "ParameterKey": "PublicSubnet3CIDR",
-        "ParameterValue": "10.0.5.0/24"
+          "ParameterKey": "PublicCIDR",
+            "ParameterValue": "0.0.0.0/0"
+    },
+    {
+          "ParameterKey": "AMI",
+            "ParameterValue": "ami-07c4ba65c646b4a7c"
+    },
+    {
+        "ParameterKey": "keyName",
+            "ParameterValue": "SSH_Key"
+    },
+    {
+          "ParameterKey": "Env",
+            "ParameterValue": "dev"
+    },
+    {
+          "ParameterKey": "Tld",
+            "ParameterValue": "mohitmalani.tech"
+    },
+    {
+          "ParameterKey": "Engine",
+            "ParameterValue": "postgres"
+    },
+    {
+          "ParameterKey": "EngineVersion",
+            "ParameterValue": "12.9"
+    },
+    {
+          "ParameterKey": "InstanceClass",
+            "ParameterValue": "db.t2.micro"
+    },
+    {
+          "ParameterKey": "AZDeployment",
+            "ParameterValue": "false"
+    },
+    {
+          "ParameterKey": "InstanceIdentifier",
+            "ParameterValue": "csye6225"
+    },
+    {
+          "ParameterKey": "DBUsername",
+            "ParameterValue": "csye6225_user"
+    },
+    {
+          "ParameterKey": "DBPassword",
+            "ParameterValue": "LogMeiN!"
+    },
+    {
+          "ParameterKey": "PublicAccess",
+            "ParameterValue": "false"
+    },
+    {
+          "ParameterKey": "DBName",
+            "ParameterValue": "csye6225"
+    },
+    {
+          "ParameterKey": "Storage",
+            "ParameterValue": "20"
+    },
+    {
+          "ParameterKey": "Zone",
+            "ParameterValue": "us-east-1a"
+    },
+    {
+          "ParameterKey": "RetentionPeriod",
+            "ParameterValue": "0"
+    },
+    {
+      "ParameterKey": "HostedZoneID",
+        "ParameterValue": "Z01273983EUFZC6SY0X7K"
+    },
+    {
+      "ParameterKey": "HostedZone",
+        "ParameterValue": "prod.mohitmalani.tech"
     }
 ]
